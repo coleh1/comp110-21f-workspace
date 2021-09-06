@@ -18,4 +18,5 @@ while i <= letters_inword:
         letter_count = letter_count + 1
     else:
         a = a + 1
-print(letter_count)
+answer = str(letter_count)
+print("Count: " + answer)
