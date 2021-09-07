@@ -2,6 +2,7 @@
 
 __author__ = "730400371"
 
+
 choice: int = int(input("Enter a number: "))
 
 if choice < 25:
