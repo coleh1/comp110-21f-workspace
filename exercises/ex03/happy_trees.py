@@ -12,3 +12,4 @@ i: int = 0
 while i < number:
     print((i + 1) * TREE)
     i = i + 1
+    
