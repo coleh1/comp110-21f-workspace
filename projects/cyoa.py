@@ -21,6 +21,7 @@ def greet() -> None:
 
 
 def main() -> None:
+    """The Main Menu."""
     greet()
     global points
     print(f"You currently have ({points}) adventure points.")
@@ -135,6 +136,7 @@ def game_2() -> None:
 
 
 def gamble(x: int) -> int:
+    """Gambling Game."""
     global points
     print(f"({player}) you have chosen to gamble your ({points}) adventure points. Good luck!")
     print("You can chose to gamble between -2 and 5 or -10 and 20")
