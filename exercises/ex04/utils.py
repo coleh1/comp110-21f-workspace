@@ -22,14 +22,14 @@ def all(input_list: list[int], input_int: int) -> bool:
 
 def is_equal(x: list[int], y: list[int]) -> bool:
     """Tests the equality of two lists."""
+    if (x + y) == []:
+        return True
     if x == []:
         return False
     if y == []:
         return False
     if len(x) != len(y):
         return False
-    if (x + y) == []:
-        return True
 
     z = sum(x) / len(x)
     t = sum(y) / len(y)
