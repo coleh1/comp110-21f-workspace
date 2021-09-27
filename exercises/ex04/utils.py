@@ -26,7 +26,7 @@ def is_equal(x: list[int], y: list[int]) -> bool:
         return False
     if y == []:
         return False
-    if len(x) != len(y):
+    if (x + y) == []:
         return False
 
     z = sum(x) / len(x)
