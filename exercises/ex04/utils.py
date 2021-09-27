@@ -1,17 +1,29 @@
 """List utility functions."""
 
+
 __author__ = "730400371"
 
 
-def all(x: list[int], y: int) -> None:
-    z = sum(x) / len(x)
-    if z == y:
-        print("True")
-    else:
-        print("False")
+def all(input_list: list[int], input_int: int) -> None:
+    """Tests the equality of a list and integer."""
+    i: int = 0
+    current_input: int = 0
+    outcome: str = "begin"
 
+    while i < len(input_list):
+        if input_list[current_input] == input_int:
+            i += 1
+            current_input += 1
+            outcome = "True"
+        else:
+            outcome = "False"
+            i += 1
+       
+    print(outcome)
+    
 
 def is_equal(x: list[int], y: list[int]) -> None:
+    """Tests the equality of two lists."""
     z = sum(x) / len(x)
     t = sum(y) / len(y)
     if z == t:
@@ -21,6 +33,7 @@ def is_equal(x: list[int], y: list[int]) -> None:
 
 
 def max(input: list[int]) -> int:
+    """Takes the Max Value."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     
@@ -42,3 +55,6 @@ def max(input: list[int]) -> int:
             compared_input = 0
             i = 0
     return max_value
+
+
+all([1, 2, 1], 1)
