@@ -1,5 +1,35 @@
-"""examples of user input and variables"""
+"""Examples of usign lists in a simple 'game'."""
 
-user_name: str= input("Who are you?)
-print("Wow, " + user_name + ",you rock!")
-print(user_name+ " have a great day!")
+
+from random import randint
+
+
+rolls: list[int] = list()
+
+while len(rolls) == 0 or rolls[len(rolls) - 1] != 1:
+    rolls.append(randint(1, 6))
+
+print(rolls)
+
+rolls.pop(len(rolls) - 1)
+print(rolls)
+
+i: int = 0
+sum: int = 0
+while i < len(rolls):
+    sum = sum + rolls[i]
+    i = i + 1
+print(f"Total score: {sum}")
+
+# rolls.append(randint(1, 6))
+# rolls.append(randint(1, 6))
+# rolls.append(randint(1, 6))
+# print(rolls)
+
+# print(rolls[0])
+# print(rolls[1])
+
+# print(len(rolls))
+
+# last_index: int = len(rolls) - 1
+# print(rolls[last_index])
