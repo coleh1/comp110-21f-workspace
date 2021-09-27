@@ -18,14 +18,15 @@ def all(input_list: list[int], input_int: int) -> bool:
     return True
        
 
-def is_equal(x: list[int], y: list[int]) -> None:
+def is_equal(x: list[int], y: list[int]) -> bool:
     """Tests the equality of two lists."""
     z = sum(x) / len(x)
     t = sum(y) / len(y)
     if z == t:
-        print("True")
+        return True
     else:
-        print("False")
+        return False
+
 
 
 def max(input: list[int]) -> int:
