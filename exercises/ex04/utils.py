@@ -4,23 +4,19 @@
 __author__ = "730400371"
 
 
-def all(input_list: list[int], input_int: int) -> None:
+def all(input_list: list[int], input_int: int) -> bool:
     """Tests the equality of a list and integer."""
     i: int = 0
     current_input: int = 0
-    outcome: str = "begin"
 
     while i < len(input_list):
         if input_list[current_input] == input_int:
             i += 1
             current_input += 1
-            outcome = "True"
         else:
-            outcome = "False"
-            i += 1
+            return False
+    return True
        
-    print(outcome)
-    
 
 def is_equal(x: list[int], y: list[int]) -> None:
     """Tests the equality of two lists."""
@@ -55,6 +51,3 @@ def max(input: list[int]) -> int:
             compared_input = 0
             i = 0
     return max_value
-
-
-all([1, 2, 1], 1)
