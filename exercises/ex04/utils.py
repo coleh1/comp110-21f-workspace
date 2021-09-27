@@ -9,6 +9,8 @@ def all(input_list: list[int], input_int: int) -> bool:
     i: int = 0
     current_input: int = 0
 
+    if input_list == []:
+        return False
     while i < len(input_list):
         if input_list[current_input] == input_int:
             i += 1
@@ -20,13 +22,19 @@ def all(input_list: list[int], input_int: int) -> bool:
 
 def is_equal(x: list[int], y: list[int]) -> bool:
     """Tests the equality of two lists."""
+    if x == []:
+        return False
+    if y == []:
+        return False
+    if len(x) != len(y):
+        return False
+
     z = sum(x) / len(x)
     t = sum(y) / len(y)
     if z == t:
         return True
     else:
         return False
-
 
 
 def max(input: list[int]) -> int:
