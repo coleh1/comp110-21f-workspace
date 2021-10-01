@@ -4,6 +4,7 @@ __author__ = "7304400371"
 
 
 def only_evens(xs: list[int]) -> list[int]:
+    """Select only even integers."""
     new_list = list()
     length_list = len(xs)
     current_item: int = 0
@@ -18,6 +19,7 @@ def only_evens(xs: list[int]) -> list[int]:
 
 
 def sub(xs: list[int], start_index: int, end_index: int) -> list[int]:
+    """Extract a certain list."""
     if start_index < 0:
         start_index = 0
     if end_index > len(xs) - 1:
@@ -38,6 +40,7 @@ def sub(xs: list[int], start_index: int, end_index: int) -> list[int]:
 
 
 def concat(xs: list[int], ys: list[int]) -> list[int]:
+    """Combine two lists."""
     new_list = xs
     if len(xs) == 0:
         if len(ys) == 0:
