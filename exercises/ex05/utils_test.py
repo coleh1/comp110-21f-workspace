@@ -22,7 +22,7 @@ def test_only_evens_no_evens() -> None:
     
 
 def test_sub_standard() -> None:
-    """test for a standard list."""
+    """Test for a standard list."""
     a_list = [10, 20, 30, 40]
     assert sub(a_list, 1, 3) == [20, 30]
 
