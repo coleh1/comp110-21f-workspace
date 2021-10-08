@@ -62,3 +62,6 @@ def max(input: list[int]) -> int:
             compared_input = 0
             i = 0
     return max_value
+
+
+max([])
