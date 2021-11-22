@@ -77,3 +77,24 @@ def count(list_1: list[str]) -> dict[str, int]:
         else:
             result[each] = 1
     return result
+
+
+def count_2var(data: dict[str, list[str]], var_1: str, var_2: str) -> int:
+    """Counts the number of times that two values appear at the same time in a dictionary."""
+    count: int = 0
+    i: int = 0
+
+    while i < len(data[var_1]):
+        current_var_1: str = data[var_1][i]
+        current_var_2: str = data[var_2][i]
+        current_var_1_int: int = int(current_var_1)
+        current_var_2_int: int = int(current_var_2)
+        if current_var_1_int > 4:
+            if current_var_2_int > 4:
+                count += 1
+                i += 1
+            else:
+                i += 1
+        else:
+            i += 1
+    return count
